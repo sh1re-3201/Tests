@@ -14,10 +14,7 @@ public class Playground {
         cars.add("Ford");
         cars.add("Mazda");
         cars.set(0, input);
-        for (String car : cars) {
-            System.out.println(car);
 
-        }
 
 
     }

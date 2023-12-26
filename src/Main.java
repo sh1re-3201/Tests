@@ -14,6 +14,7 @@ public class Main {
 */
     public static double a, b, z;
     public static int pil;
+
     public static void main(String[] args) {
         Scanner utama = new Scanner(System.in);
         String title = "Calculator Program";
@@ -101,6 +102,8 @@ public class Main {
                             b = universal.nextDouble();
                             addition(a, b);
                             System.out.println("Hasil dari penjumlahan " + a + " dan " + b + " adalah = " + z);
+                            menuAkhir();
+                            break;
 
                         case 2:
                             System.out.println("Anda memilih operasi pengurangan");
@@ -111,6 +114,8 @@ public class Main {
                             b = universal.nextDouble();
                             subtract(a, b);
                             System.out.println("Hasil dari pengurangan " + a + " dan " + b + " adalah = " + z);
+                            menuAkhir();
+                            break;
 
                         case 3:
                             System.out.println("Anda memilih operasi pembagian");
@@ -121,6 +126,8 @@ public class Main {
                             b = universal.nextDouble();
                             div(a, b);
                             System.out.println("Hasil dari pembagian " + a + " dan " + b + " adalah = " + z);
+                            menuAkhir();
+                            break;
 
                         case 4:
                             System.out.println("Anda memilih operasi perkalian");
@@ -131,7 +138,15 @@ public class Main {
                             b = universal.nextDouble();
                             multiplication(a, b);
                             System.out.println("Hasil dari perkalian " + a + " dan " + b + " adalah = " + z);
+                            menuAkhir();
+                            break;
+
+                        default :
+                            System.out.println("Pilihan anda salah\nSilahkan coba lagi");
+                            break;
+
                     }
+
 
 
 
@@ -140,7 +155,7 @@ public class Main {
         System.out.println("Tolong masukkan data berupa angka.");
         System.out.println();
         masukkan.next();
-    }
+        }
 
 
     }
@@ -166,6 +181,32 @@ public class Main {
 //    Method untuk perkalian
     private static void multiplication(double a, double b){
         z = a * b;
+
+    }
+//    Method untuk menu akhir bahasa Indonesia
+    static void menuAkhir(){
+        Scanner akhir = new Scanner(System.in);
+        int akhirPil;
+        System.out.println("==================================================");
+        System.out.println("Operasi anda selesai");
+        System.out.println("==================================================");
+        System.out.println();
+        System.out.println("1. Kembali ke menu utama ");
+        System.out.println("2. Keluar");
+        System.out.print("Pilihan anda : ");
+        akhirPil = akhir.nextInt();
+
+        switch (akhirPil){
+            case 1:
+                indo();
+                break;
+            case 2:
+                System.exit(0);
+                break;
+        }
+    }
+//    Method untuk menu akhir bahasa Inggris
+    static void finalMenu(){
 
     }
 
